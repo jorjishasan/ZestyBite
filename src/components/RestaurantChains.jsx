@@ -22,8 +22,8 @@ const RestaurantChains = () => {
         Restaurants with online food delivery in Bangalore
       </h2>
       <div>
-        {restaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resInfo={restaurant.info} />
+        {restaurants.map((restaurant, index) => (
+          <RestaurantCard key={index} resInfo={restaurant.info} />
         ))}
       </div>
     </div>
