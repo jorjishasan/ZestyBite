@@ -50,7 +50,8 @@ const RestaurantChains = () => {
   return (
     <div>
       <h2 className="mb-4 text-2xl font-bold">
-        Restaurants with online food delivery in Bangalore
+        Restaurants with online food delivery in Bangalore (
+        {filteredRestaurants.length || 0})
       </h2>
       <FilterBar
         activeFilters={activeFilters}
