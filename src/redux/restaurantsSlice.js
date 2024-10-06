@@ -14,7 +14,7 @@ const restaurantsSlice = createSlice({
     setRestaurantsData: (state, action) => {
       state.foodCategory = action.payload.cards[0];
       state.topRestaurants = action.payload.cards[1];
-      state.restaurantChains = action.payload.cards[2];
+      state.restaurantChains = action.payload.cards[4];
     },
   },
 });
