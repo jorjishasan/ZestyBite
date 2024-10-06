@@ -9,7 +9,7 @@ const Body = () => {
   if (isLoading) return <div>Loading...</div>;
 
   return (
-    <div className="mx-auto max-w-7xl">
+    <div className="mx-auto mb-8 max-w-7xl">
       <FoodCategory />
       <TopRestaurants />
       <RestaurantChains />
