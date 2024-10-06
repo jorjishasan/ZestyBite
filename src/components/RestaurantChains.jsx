@@ -7,13 +7,22 @@ const RestaurantChains = () => {
       state.restaurants.restaurantChains?.card?.card?.gridElements
         ?.infoWithStyle?.restaurants,
   );
+
+  const topRestaurants = useSelector(
+    (state) =>
+      state.restaurants.topRestaurants?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants,
+  );
+
+  const restaurants = [...restaurantChains, ...topRestaurants];
+
   return (
     <div>
       <h2 className="text-2xl font-bold">
         Restaurants with online food delivery in Bangalore
       </h2>
       <div>
-        {restaurantChains.map((restaurant) => (
+        {restaurants.map((restaurant) => (
           <RestaurantCard key={restaurant.info.id} resInfo={restaurant.info} />
         ))}
       </div>
