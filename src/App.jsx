@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Body from "./components/Body";
+import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Help from "./components/Help";
 import Cart from "./components/Cart";
-import RestaurantMenu from "./components/RestaurantMenu";
+import RestaurantMenu from "./pages/RestaurantMenu";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Header />
         <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<Body />} />
+            <Route path="/" element={<Home />} />
             <Route path="/help" element={<Help />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/restaurants/:id" element={<RestaurantMenu />} />
