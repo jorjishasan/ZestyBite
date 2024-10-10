@@ -1,4 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
+import findNestedProp from "../utils/findNestedProps";
+import hasProperty from "../utils/hasProperty";
 
 const initialState = {
   info: null,
@@ -14,7 +16,10 @@ const restaurantMenuSlice = createSlice({
       state.info = action.payload;
     },
     setItemCards: (state, action) => {
-      state.itemCards = action.payload;
+      const nestedCards = findNestedProp(action.payload || {}, "cards") || [];
+      state.itemCards = nestedCards.filter((item) =>
+        hasProperty(item, "itemCards"),
+      );
     },
     setOffers: (state, action) => {
       state.offers = action.payload;
