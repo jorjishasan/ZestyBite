@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
 import FilterBar from "./FilterBar";
 
@@ -59,7 +60,13 @@ const RestaurantChains = () => {
       />
       <div className="mt-4 flex flex-wrap gap-4">
         {filteredRestaurants.map((restaurant, index) => (
-          <RestaurantCard key={index} resInfo={restaurant.info} />
+          <Link
+            key={index}
+            to={`/restaurants/${restaurant.info.id}`}
+            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5" // Adjust based on your layout needs
+          >
+            <RestaurantCard resInfo={restaurant.info} />
+          </Link>
         ))}
       </div>
     </div>
