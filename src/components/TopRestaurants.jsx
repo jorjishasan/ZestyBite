@@ -3,6 +3,7 @@ import useScrollControl from "../hooks/useScrollControl";
 import ScrollButtons from "./ScrollButtons";
 import { useSelector } from "react-redux";
 import RestaurantCard from "./RestaurantCard";
+import { Link } from "react-router-dom";
 
 const TopRestaurants = () => {
   const scrollContainerRef = useRef(null);
@@ -31,7 +32,13 @@ const TopRestaurants = () => {
         className="hide-scrollbar flex gap-4 overflow-x-auto"
       >
         {topRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resInfo={restaurant.info} />
+          <Link
+            key={restaurant.info.id}
+            to={`/restaurants/${restaurant.info.id}`}
+            className="flex-shrink-0" // Prevents the link from shrinking in the flex container
+          >
+            <RestaurantCard resInfo={restaurant.info} />
+          </Link>
         ))}
       </div>
       <hr className="mx-auto my-8 h-[3px] max-w-6xl bg-gray-100/10" />
