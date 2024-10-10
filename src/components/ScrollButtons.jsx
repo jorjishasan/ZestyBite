@@ -5,7 +5,7 @@ const ScrollButtons = ({
   canScrollLeft,
   canScrollRight,
 }) => (
-  <span className="flex justify-between gap-2">
+  <span className="flex justify-center gap-2">
     <button
       onClick={onScrollLeft}
       disabled={!canScrollLeft}
