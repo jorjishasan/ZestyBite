@@ -1,3 +1,4 @@
+/* eslint-disable no-prototype-builtins */
 function findNestedProp(obj, keyToFind) {
   if (typeof obj !== "object" || obj === null) return undefined;
 
