@@ -22,6 +22,9 @@ const Header = () => {
     clearCartHoverTimeout,
   } = useCartHover();
 
+  // Only show CartHover if we're not on the cart page AND the cart is being hovered
+  const showCartHover = !isCartPage && isCartHovered;
+
   return (
     <div className="w-full bg-white shadow-[0_15px_40px_-20px_rgba(40,44,63,0.15)]">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -29,11 +32,11 @@ const Header = () => {
           <LeftHeader />
           <RightHeader
             cartItemCount={cartItemCount}
-            handleCartHover={isCartPage ? null : handleCartHover}
+            handleCartHover={handleCartHover}
           />
         </div>
       </nav>
-      {!isCartPage && isCartHovered && (
+      {showCartHover && (
         <div
           style={{
             position: "absolute",
@@ -41,7 +44,7 @@ const Header = () => {
             left: `${cartPosition.left}px`,
             zIndex: 50,
           }}
-          onMouseEnter={clearCartHoverTimeout}
+          onMouseEnter={() => clearCartHoverTimeout()}
           onMouseLeave={() => handleCartHover(null, false)}
         >
           <CartHover />
