@@ -22,7 +22,7 @@ const Cart = () => {
       ))}
 
       <button className="mt-4 w-full rounded-md bg-orange-500 py-4 text-center font-semibold text-white">
-        Total ⏤ ₹{Math.round(total / 100)}
+        Pay ₹{Math.round(total / 100)}
       </button>
     </div>
   );
