@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
-import Help from "./components/Help";
+import Help from "./pages/Help";
 import Cart from "./pages/Cart";
 import RestaurantMenu from "./pages/RestaurantMenu";
 
