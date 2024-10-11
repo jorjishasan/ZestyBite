@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Help from "./components/Help";
-import Cart from "./components/Cart";
+import Cart from "./pages/Cart";
 import RestaurantMenu from "./pages/RestaurantMenu";
 
 function App() {
