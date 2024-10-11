@@ -4,7 +4,7 @@ import emptyCart from "../assets/emptyCart.svg";
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart);
   const total = cartItems.reduce(
-    (acc, item) => acc + item.price * item.quantity,
+    (acc, item) => acc + (item.price || item.defaultPrice) * item.quantity,
     0,
   );
   return cartItems.length === 0 ? (
