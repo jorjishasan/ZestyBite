@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Help from "./pages/Help";
 import Cart from "./pages/Cart";
 import RestaurantMenu from "./pages/RestaurantMenu";
+import Offers from "./pages/Offers";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/help" element={<Help />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/offers" element={<Offers />} />
             <Route path="/restaurants/:id" element={<RestaurantMenu />} />
           </Routes>
         </main>
