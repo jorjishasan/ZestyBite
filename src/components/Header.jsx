@@ -1,10 +1,14 @@
 import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 import LeftHeader from "./LeftHeader";
 import RightHeader from "./RightHeader";
 import CartHover from "./CartHover";
 import useCartHover from "../hooks/useCartHover";
 
 const Header = () => {
+  const location = useLocation();
+  const isCartPage = location.pathname.includes("/cart");
+
   const cartItems = useSelector((state) => state.cart);
   const cartItemCount = cartItems.reduce(
     (total, item) => total + item.quantity,
@@ -25,11 +29,11 @@ const Header = () => {
           <LeftHeader />
           <RightHeader
             cartItemCount={cartItemCount}
-            handleCartHover={handleCartHover}
+            handleCartHover={isCartPage ? null : handleCartHover}
           />
         </div>
       </nav>
-      {isCartHovered && (
+      {!isCartPage && isCartHovered && (
         <div
           style={{
             position: "absolute",
