@@ -36,7 +36,7 @@ const FoodCategory = () => {
             src={CATEGORY_API_URL + category.imageId}
             key={category.id}
             alt={category.action?.text || "Food category"}
-            className="mr-4 w-36 flex-shrink-0 object-cover"
+            className="mr-4 w-28 flex-shrink-0 object-cover sm:w-36"
           />
         ))}
       </div>
