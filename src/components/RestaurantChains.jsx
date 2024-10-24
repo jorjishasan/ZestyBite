@@ -58,7 +58,7 @@ const RestaurantChains = () => {
         activeFilters={activeFilters}
         setActiveFilters={setActiveFilters}
       />
-      <div className="mt-4 flex flex-row flex-wrap gap-10 sm:flex-row">
+      <div className="mt-4 flex flex-row flex-wrap gap-10 sm:flex-row sm:gap-16">
         {filteredRestaurants.map((restaurant, index) => (
           <Link
             key={index}
