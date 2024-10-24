@@ -20,6 +20,7 @@ const Header = () => {
     cartPosition,
     handleCartHover,
     clearCartHoverTimeout,
+    cartHoverRef,
   } = useCartHover();
 
   // Only show CartHover if we're not on the cart page AND the cart is being hovered
@@ -36,12 +37,13 @@ const Header = () => {
           />
         </div>
       </nav>
+      {/* Make sure the carthover component not bound the window width */}
       {showCartHover && (
         <div
+          ref={cartHoverRef}
           style={{
             position: "absolute",
-            top: `${cartPosition.top}px`,
-            left: `${cartPosition.left}px`,
+            ...cartPosition,
             zIndex: 50,
           }}
           onMouseEnter={() => clearCartHoverTimeout()}
