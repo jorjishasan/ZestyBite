@@ -5,17 +5,21 @@ import locationIcon from "../assets/location-pin.svg";
 const LeftHeader = () => {
   return (
     <div className="flex items-center">
-      <img src={brandIcon} alt="Brand Logo" className="w-13 h-13" />
-      <div className="ml-4 flex items-center text-gray-600">
+      <img
+        src={brandIcon}
+        alt="Brand Logo"
+        className="sm:w-13 sm:h-13 h-10 w-10"
+      />
+      <div className="invisible ml-2 flex items-center text-gray-600 sm:visible sm:ml-4">
         <img
           src={locationIcon}
           alt="Location Icon"
-          className="-mt-1 mr-1 w-5"
+          className="-mt-1 mr-1 w-4 sm:w-5"
         />
-        <span className="text-sm">Rajshahi</span>
+        <span className="text-xs sm:text-sm">Rajshahi</span>
         <Link
           to="/change-location"
-          className="ml-1 text-sm text-orange-500 underline"
+          className="ml-1 text-xs text-orange-500 underline sm:text-sm"
         >
           Change Location
         </Link>

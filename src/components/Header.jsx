@@ -27,8 +27,8 @@ const Header = () => {
 
   return (
     <div className="w-full bg-white shadow-[0_15px_40px_-20px_rgba(40,44,63,0.15)]">
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-3">
+      <nav className="flex justify-center px-4 sm:px-6 lg:px-8">
+        <div className="flex w-full max-w-7xl items-center justify-between py-3">
           <LeftHeader />
           <RightHeader
             cartItemCount={cartItemCount}
