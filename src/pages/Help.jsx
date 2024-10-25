@@ -23,9 +23,7 @@ const Help = () => {
   };
 
   return (
-    <div className="mx-auto max-w-4xl p-6 text-gray-800">
-      <h1 className="mb-6 mt-4 text-3xl font-bold">Help Center</h1>
-
+    <div className="mx-auto max-w-4xl p-8 text-gray-800">
       <div className="mb-16">
         <div className="relative">
           <input
@@ -50,7 +48,7 @@ const Help = () => {
                 className="flex w-full items-center justify-between p-4 text-left font-semibold hover:bg-gray-50"
                 onClick={() => toggleFaq(index)}
               >
-                <span className="text-lg">{faq.question}</span>
+                <span className="text-md sm:text-lg">{faq.question}</span>
                 {openFaqIndex === index ? <FaChevronUp /> : <FaChevronDown />}
               </button>
               {openFaqIndex === index && (
