@@ -4,7 +4,7 @@ import { FaTag, FaClock } from "react-icons/fa";
 import { offers } from "../utils/offersData";
 
 const OfferCard = ({ title, description, discount, expiryDate, imageUrl }) => (
-  <div className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
+  <div className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
     <img
       src={imageUrl}
       alt={title}
@@ -56,7 +56,7 @@ const Offers = () => {
           <input
             type="email"
             placeholder="Enter your email"
-            className="w-full max-w-md rounded-l-lg border-gray-300 px-4 py-2 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-200"
+            className="max-w-md rounded-l-lg border-gray-500 px-4 py-2 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-200 md:w-full"
           />
           <button className="rounded-r-lg bg-orange-600 px-6 py-2 text-white transition-colors hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">
             Subscribe
