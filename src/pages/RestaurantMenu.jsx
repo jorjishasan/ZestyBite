@@ -24,15 +24,15 @@ const RestaurantMenu = () => {
 
       <ResMenuOfferSection offers={offers} />
 
-      <h2 className="mb-8 mt-[92px] text-center text-3xl font-bold">
-        🍝 Menu 🍲
+      <h2 className="mb-12 mt-12 text-center text-2xl font-bold md:text-3xl">
+        Restaurant Menu
       </h2>
       {itemCards && itemCards.length > 0 ? (
         itemCards.map((item, index) => (
           <ResMenuSection
             key={item.card?.card?.title || index}
             item={item}
-            index={index}
+            defaultExpanded={index === 1}
           />
         ))
       ) : (
