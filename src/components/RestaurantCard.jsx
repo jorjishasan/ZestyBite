@@ -9,7 +9,7 @@ const RestaurantCard = ({ resInfo }) => {
 
   return (
     <div className="w-[300px] transform transition-all duration-200 ease-in-out hover:scale-105 sm:w-[270px]">
-      <div className="w-full overflow-hidden rounded-t-lg sm:h-[130px]">
+      <div className="h-[130px] w-full overflow-hidden rounded-t-lg">
         <img
           className="h-full w-full transform object-cover transition-transform duration-300 ease-in-out hover:scale-110"
           src={`${RESTAURANT_CARD_IMAGE_URL}${cloudinaryImageId}`}
