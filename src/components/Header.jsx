@@ -27,7 +27,7 @@ const Header = () => {
   const showCartHover = !isCartPage && isCartHovered;
 
   return (
-    <div className="w-full bg-white shadow-[0_15px_40px_-20px_rgba(40,44,63,0.15)]">
+    <header className="sticky top-0 z-50 w-full bg-white shadow-[0_15px_40px_-20px_rgba(40,44,63,0.15)]">
       <nav className="flex justify-center px-4 sm:px-6 lg:px-8">
         <div className="flex w-full max-w-7xl items-center justify-between py-3">
           <LeftHeader />
@@ -37,14 +37,13 @@ const Header = () => {
           />
         </div>
       </nav>
-      {/* Make sure the carthover component not bound the window width */}
       {showCartHover && (
         <div
           ref={cartHoverRef}
           style={{
             position: "absolute",
             ...cartPosition,
-            zIndex: 50,
+            zIndex: 60,
           }}
           onMouseEnter={() => clearCartHoverTimeout()}
           onMouseLeave={() => handleCartHover(null, false)}
@@ -52,7 +51,7 @@ const Header = () => {
           <CartHover />
         </div>
       )}
-    </div>
+    </header>
   );
 };
 
