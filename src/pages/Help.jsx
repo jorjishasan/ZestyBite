@@ -23,7 +23,7 @@ const Help = () => {
   };
 
   return (
-    <div className="mx-auto max-w-4xl p-8 text-gray-800">
+    <div className="mx-auto mt-6 max-w-4xl p-8 text-gray-800 md:mt-10">
       <div className="mb-16">
         <div className="relative">
           <input
