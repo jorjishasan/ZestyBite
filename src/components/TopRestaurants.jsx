@@ -16,7 +16,7 @@ const TopRestaurants = () => {
   );
   return (
     <div className="my-10">
-      <div className="mb-4 flex items-center justify-between">
+      <div className="mb-4 flex items-center justify-between gap-4">
         <h2 className="text-2xl font-bold">
           Top restaurant chains in Rajshahi
         </h2>
