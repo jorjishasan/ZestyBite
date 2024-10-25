@@ -1,4 +1,4 @@
-# Zestybite
+# ZestyBite
 
 Zestybite is a modern food delivery application built with React, Redux, and Tailwind CSS.
 
@@ -43,7 +43,7 @@ Before you begin, ensure you have the following installed:
 
 ## Features
 
-- User authentication (Sign In / Sign Up)
+- GeoLocation Search
 - Browse restaurants and menus
 - Place food orders
 - View order history
