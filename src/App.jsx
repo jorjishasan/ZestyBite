@@ -7,10 +7,12 @@ import Cart from "./pages/Cart";
 import RestaurantMenu from "./pages/RestaurantMenu";
 import Offers from "./pages/Offers";
 import SignIn from "./pages/SignIn";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="flex min-h-screen flex-col font-sans">
         <Header />
         <main className="flex-grow">
