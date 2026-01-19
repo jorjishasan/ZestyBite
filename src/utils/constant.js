@@ -1,5 +1,5 @@
 const SWIGGY_API_URL =
-  "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9716&lng=77.5946";
+  "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999";
 
 const CATEGORY_API_URL =
   "https://corsproxy.io/?https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/";
