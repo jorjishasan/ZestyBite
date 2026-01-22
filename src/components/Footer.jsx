@@ -81,7 +81,7 @@ const Footer = () => {
           {/* copyright */}
           <div className="">
             <p className="mt-12 flex flex-col items-center justify-center space-y-4 border-t border-gray-700 pt-8 text-sm">
-              &copy; 2024 ZestyBite. All rights reserved.
+              &copy; {new Date().getFullYear()} ZestyBite. All rights reserved.
             </p>
           </div>
         </div>
